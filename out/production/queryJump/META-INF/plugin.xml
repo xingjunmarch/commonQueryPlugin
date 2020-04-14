@@ -1,0 +1,42 @@
+<idea-plugin>
+  <id>com.valueonline.unique.plugin.queryJump</id>
+  <name>queryJump</name>
+  <version>1.0</version>
+  <vendor email="jun.xing@valueonline.com" >valueonline</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>yidong project:If you use Method commonQuery, you can click the queryId string, then cursor can jump to the xml sql.</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="queryJump" class="queryJump" text="queryJump" description="queryJump">
+      <!--<add-to-group group-id="ToolsMenu" anchor="first"/>-->
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl Z"/>
+      <!--<mouse-shortcut keystroke="control shift button1" keymap="$default"/>-->
+      <mouse-shortcut keystroke="control button1" keymap="$default"/>
+    </action>
+  </actions>
+
+</idea-plugin>
