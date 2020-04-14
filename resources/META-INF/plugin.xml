@@ -5,13 +5,12 @@
     <vendor email="jun.xing@valueonline.com">valueonline</vendor>
 
     <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>yidong project:If you use Method commonQuery, you can click the queryId string, then cursor can jump to the xml sql.</em>
+      yidong project:If you use Method commonQuery, you can click the queryId string, then cursor can jump to the xml sql.<br>
     ]]></description>
 
     <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+      1.0<br>
+      <em>init</em>
     ]]>
     </change-notes>
 
