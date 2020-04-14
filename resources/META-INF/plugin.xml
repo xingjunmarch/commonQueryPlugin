@@ -1,42 +1,68 @@
 <idea-plugin>
-  <id>com.valueonline.unique.plugin.queryJump</id>
-  <name>queryJump</name>
-  <version>1.0</version>
-  <vendor email="jun.xing@valueonline.com" >valueonline</vendor>
+    <id>com.valueonline.unique.plugin.queryJump</id>
+    <name>queryJump</name>
+    <version>1.0</version>
+    <vendor email="jun.xing@valueonline.com">valueonline</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
       Enter short description for your plugin here.<br>
       <em>yidong project:If you use Method commonQuery, you can click the queryId string, then cursor can jump to the xml sql.</em>
     ]]></description>
 
-  <change-notes><![CDATA[
+    <change-notes><![CDATA[
       Add change notes here.<br>
       <em>most HTML tags may be used</em>
     ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="173.0"/>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
 
-  <actions>
-    <!-- Add your actions here -->
-    <action id="queryJump" class="queryJump" text="queryJump" description="queryJump">
-      <!--<add-to-group group-id="ToolsMenu" anchor="first"/>-->
-      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl Z"/>
-      <!--<mouse-shortcut keystroke="control shift button1" keymap="$default"/>-->
-      <mouse-shortcut keystroke="control button1" keymap="$default"/>
-    </action>
-  </actions>
+    <actions>
+        <!-- Add your actions here -->
+        <action id="queryJump" class="queryJump" text="queryJump" description="queryJump">
+            <!--<add-to-group group-id="ToolsMenu" anchor="first"/>-->
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+
+
+            <!-- The <keyboard-shortcut> node specifies the keyboard shortcut
+           for the action. An action can have several keyboard shortcuts.
+           The mandatory "first-keystroke" attribute specifies the first
+           keystroke of the action. The key strokes are specified according
+           to the regular Swing rules.
+           The optional "second-keystroke" attribute specifies the second
+           keystroke of the action.
+           The mandatory "keymap" attribute specifies the keymap for which
+           the action is active. IDs of the standard keymaps are defined as
+           constants in the com.intellij.openapi.keymap.KeymapManager class. -->
+
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl Z"/>
+
+            <!-- The <mouse-shortcut> node specifies the mouse shortcut for the
+           action. An action can have several mouse shortcuts.
+           The mandatory "keystroke" attribute specifies the clicks and
+           modifiers for the action. It is defined as a sequence of words
+           separated by spaces:
+           "button1", "button2", "button3" for the mouse buttons;
+           "shift", "control", "meta", "alt", "altGraph" for the modifier keys;
+           "doubleClick" if the action is activated by a double-click of the button.
+           The mandatory "keymap" attribute specifies the keymap for which
+           the action is active. IDs of the standard keymaps are defined as
+           constants in the com.intellij.openapi.keymap.KeymapManager class. -->
+
+            <!--<mouse-shortcut keystroke="control shift button1" keymap="$default"/>-->
+            <mouse-shortcut keystroke="control button1" keymap="$default"/>
+        </action>
+    </actions>
 
 </idea-plugin>
